@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+require "#{ENV['TM_SUPPORT_PATH']}/lib/textmate.rb"
+require "#{ENV['TM_BUNDLE_PATH']}/lib/dateStringGeneration.rb"
+
+input = (ENV['TM_SELECTED_TEXT'] or ENV['TM_CURRENT_LINE']).to_s
+generator = DateStringGeneration.new
+print generator.dateStringsForTaskHeading(input)</string>
+	<key>fallbackInput</key>
+	<string>line</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>@D</string>
+	<key>name</key>
+	<string>Generate Dates</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>uuid</key>
+	<string>E3449D45-C973-479F-BE33-95B928C4035E</string>
+</dict>
+</plist>
