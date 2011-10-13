@@ -7,7 +7,10 @@
 	<key>scope</key>
 	<string>markup.list.pending.tasks</string>
 	<key>settings</key>
-	<dict/>
+	<dict>
+		<key>foreground</key>
+		<string>#FF0000</string>
+	</dict>
 	<key>uuid</key>
 	<string>59C72689-01D3-4817-989E-7E7870C23F55</string>
 </dict>
